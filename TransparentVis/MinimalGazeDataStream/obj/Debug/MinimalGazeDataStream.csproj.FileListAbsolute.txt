@@ -1,0 +1,18 @@
+C:\Users\master\Documents\GitHub\BrainGazeProject\BrainGazeProject\MinimalGazeDataStream\bin\Debug\Tobii.EyeX.Client.Net20.dll
+C:\Users\master\Documents\GitHub\BrainGazeProject\BrainGazeProject\MinimalGazeDataStream\bin\Debug\Tobii.EyeX.Client.dll
+C:\Users\master\Documents\GitHub\BrainGazeProject\BrainGazeProject\MinimalGazeDataStream\bin\Debug\MinimalGazeDataStream.exe
+C:\Users\master\Documents\GitHub\BrainGazeProject\BrainGazeProject\MinimalGazeDataStream\bin\Debug\MinimalGazeDataStream.pdb
+C:\Users\master\Documents\GitHub\BrainGazeProject\BrainGazeProject\MinimalGazeDataStream\bin\Debug\EyeXFramework.dll
+C:\Users\master\Documents\GitHub\BrainGazeProject\BrainGazeProject\MinimalGazeDataStream\bin\Debug\EyeXFramework.pdb
+C:\Users\master\Documents\GitHub\BrainGazeProject\BrainGazeProject\MinimalGazeDataStream\obj\Debug\MinimalGazeDataStream.csprojResolveAssemblyReference.cache
+C:\Users\master\Documents\GitHub\BrainGazeProject\BrainGazeProject\MinimalGazeDataStream\obj\Debug\MinimalGazeDataStream.exe
+C:\Users\master\Documents\GitHub\BrainGazeProject\BrainGazeProject\MinimalGazeDataStream\obj\Debug\MinimalGazeDataStream.pdb
+C:\Users\ResearchSquad\Documents\Visual Studio 2017\Projects\TransparentVis\MinimalGazeDataStream\bin\Debug\Tobii.EyeX.Client.dll
+C:\Users\ResearchSquad\Documents\Visual Studio 2017\Projects\TransparentVis\MinimalGazeDataStream\bin\Debug\Tobii.EyeX.Client.Net20.dll
+C:\Users\ResearchSquad\Documents\Visual Studio 2017\Projects\TransparentVis\MinimalGazeDataStream\bin\Debug\MinimalGazeDataStream.exe
+C:\Users\ResearchSquad\Documents\Visual Studio 2017\Projects\TransparentVis\MinimalGazeDataStream\bin\Debug\MinimalGazeDataStream.pdb
+C:\Users\ResearchSquad\Documents\Visual Studio 2017\Projects\TransparentVis\MinimalGazeDataStream\bin\Debug\EyeXFramework.dll
+C:\Users\ResearchSquad\Documents\Visual Studio 2017\Projects\TransparentVis\MinimalGazeDataStream\bin\Debug\EyeXFramework.pdb
+C:\Users\ResearchSquad\Documents\Visual Studio 2017\Projects\TransparentVis\MinimalGazeDataStream\obj\Debug\MinimalGazeDataStream.csprojResolveAssemblyReference.cache
+C:\Users\ResearchSquad\Documents\Visual Studio 2017\Projects\TransparentVis\MinimalGazeDataStream\obj\Debug\MinimalGazeDataStream.exe
+C:\Users\ResearchSquad\Documents\Visual Studio 2017\Projects\TransparentVis\MinimalGazeDataStream\obj\Debug\MinimalGazeDataStream.pdb

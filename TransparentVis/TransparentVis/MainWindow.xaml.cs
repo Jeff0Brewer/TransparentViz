@@ -30,8 +30,10 @@ namespace TransparentVis
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Variables
         private static string defaultSenderIP = "169.254.50.139"; //169.254.41.115 A, 169.254.50.139 B
         string compID = "master";
+        string testNumber = "1";
 
         private bool SenderOn = true;
         private bool ReceiverOn = true;
@@ -67,9 +69,24 @@ namespace TransparentVis
 
         EyeXHost eyeXHost;
 
+        //Logging
+        StringBuilder csv = new StringBuilder();
+        String pathStart = "C:/Users/ResearchSquad/Documents/TransparentLog/data/";
+        String filePath;
+        String currGaze = "line";
+        DateTime uni = new DateTime(1970, 1, 1);
+        int testoffset = 0;
+
+#endregion
+
         public MainWindow()
         {
             InitializeComponent();
+            // Set up handler for key press events
+            this.KeyDown += new KeyEventHandler(Main_KeyDown);
+
+            // Initialize logging
+            initLog();
 
             eyeXHost = new EyeXHost();
             eyeXHost.Start();
@@ -98,12 +115,31 @@ namespace TransparentVis
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 10);
             dispatcherTimer.Start();
         }
+        private void initLog()
+        {
+            filePath = pathStart + "Transparent_" + compID + "_" + testNumber + ".csv";
+            while (File.Exists(filePath))
+            {
+                testoffset++;
+                filePath = pathStart + "Transparent_" + compID + "_" + testNumber + "-" + testoffset.ToString() + ".csv";
+            }
+            File.AppendAllText(filePath, "X,Y,CompID,Time,Unix Time,Condition" + Environment.NewLine);
+           // csv.AppendLine("X,Y,CompID,Time,Unix Time,Condition");
 
+        }
+        private void logData()
+        {
+            String newLine = string.Format("{0},{1},{2},{3},{4},{5}", fastTrack.X, fastTrack.Y, compID, DateTime.Now.TimeOfDay,
+                                            DateTimeOffset.Now.ToUnixTimeMilliseconds(), currGaze);
+           // csv.AppendLine(newLine);
+            File.AppendAllText(filePath, newLine + Environment.NewLine);
+        }
         private void update(object sender, EventArgs e)
         {
             control();
             sendRecieve();
             lineVis();
+            logData();
         }
 
         private void control() {
@@ -307,6 +343,24 @@ namespace TransparentVis
         private void gazePoint(object s, EyeXFramework.GazePointEventArgs e)
         {
             fastTrack = new Point(e.X, e.Y);
+        }
+        private void Main_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+                Close();
+        }
+        void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            //close logic here, or
+            Close();
+        }
+        protected override void OnClosing(CancelEventArgs e)
+        {
+           // File.WriteAllText(filePath, csv.ToString());
+            eyeXHost.Dispose();
+            base.OnClosing(e);
+
+            Application.Current.Shutdown();
         }
 
         #region Sender/Receiver Methods
